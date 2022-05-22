@@ -1,17 +1,20 @@
 import React from 'react';
-import App from '../App';
+import { HomePage } from '../pages/home/home';
 
 function IndexRoutes() {
   const currentRoutePath = window.location.pathname || '/';
   switch (currentRoutePath) {
     case '/':
-      //   return <App />;
-      return <App></App>;
+      // window.location.replace('');
+      return <HomePage />;
     case '/new-home':
       return <div>new home</div>;
+
+    case '/404':
+      return <div>404 - not found</div>;
     default:
-      //   return <App />;
-      return <App></App>;
+      window.location.href = '/404';
+      return <></>;
   }
 }
 
