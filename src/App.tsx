@@ -1,20 +1,28 @@
 import React from 'react';
 import './App.scss';
-import logo from './logo.svg';
+import { MenuTopBar } from './core/menu-top-bar/menu-top-bar';
+import IndexRoutes from './routes/routes';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
+    <>
+      <header>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-12'>
+              <MenuTopBar />
+            </div>
+          </div>
+        </div>
       </header>
-    </div>
+      <section className='container'>
+        <div className='row'>
+          <div className='col-12'>
+            <IndexRoutes></IndexRoutes>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 
